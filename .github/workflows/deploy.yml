@@ -11,8 +11,8 @@ env:
   ASOFT_NEXUS_USERNAME: ${{ secrets.ASOFT_NEXUS_USERNAME }}
 
 jobs:
-   deploy-project:
-#    runs-on: ubuntu-latest
+  deploy-project:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 1.8
