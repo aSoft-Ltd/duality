@@ -1,4 +1,4 @@
-package tz.co.asoft
+package expect
 
 import duality.Failure
 import duality.Result

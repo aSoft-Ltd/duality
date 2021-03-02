@@ -1,7 +1,6 @@
-package tz.co.asoft
+package duality
 
-import duality.Either
-import duality.value
+import expect.Expectation
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
@@ -17,7 +16,7 @@ inline fun <reified T> Expectation<Either<*, *>>.toBe() = assertTrue(
     """.trimIndent()
 ) { value.value is T }
 
-inline fun <reified L, reified R> Expectation<*>.toBeEither(): Either<L, R> {
+inline fun <reified L, reified R> Expectation<*>.toBeEither() {
     assertTrue(
         """
             
@@ -27,5 +26,4 @@ inline fun <reified L, reified R> Expectation<*>.toBeEither(): Either<L, R> {
 
     """.trimIndent()
     ) { value is L || value is R }
-    return value.asEither()
 }
