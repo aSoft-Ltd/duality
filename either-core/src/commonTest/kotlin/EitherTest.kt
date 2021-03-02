@@ -1,5 +1,5 @@
+import duality.*
 import kotlinx.serialization.builtins.serializer
-import tz.co.asoft.*
 import kotlin.test.Test
 import kotlin.test.assertFails
 import kotlin.test.assertTrue
@@ -12,9 +12,7 @@ class EitherTest {
 
     @Test
     fun should_have_a_better_syntax() {
-        val thing: Either<Int, String> = 1.asEither()
-//        val thing: Either<Int, String> = Either.Left(1)
-//        val thing: Either<Int, String> = Either.Left(1)
+        val thing: Either<Int, String> = Either.Left(1)
         print(thing)
         val thing2: Either<Int, String> = Either.Right("jaribio")
         print(thing2)

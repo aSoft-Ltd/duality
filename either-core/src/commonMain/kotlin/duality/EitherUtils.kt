@@ -1,4 +1,4 @@
-package tz.co.asoft
+package duality
 
 inline val <L, R> Either<L, R>.value
     get() = when (this) {
@@ -24,18 +24,6 @@ fun <R> Either<*, R>.right(): R = when (this) {
 
 fun <R> Either<*, R>.rightOrNull(): R? = try {
     right()
-} catch (_: Throwable) {
-    null
-}
-
-inline fun <reified L, reified R, A> A.asEither(): Either<L, R> = when (this) {
-    is L -> Either.Left(this)
-    is R -> Either.Right(this)
-    else -> throw RuntimeException("$this is neither ${L::class.simpleName} nor ${R::class.simpleName}")
-}
-
-inline fun <reified L, reified R, A> A.asEitherOrNull(): Either<L, R>? = try {
-    asEither()
 } catch (_: Throwable) {
     null
 }

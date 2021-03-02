@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package tz.co.asoft
+package duality
 
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract
@@ -27,6 +27,16 @@ inline fun <T> Result<T>.catch(handler: (Exception) -> Unit): Result<T> {
         handler(Exception(value.error))
     }
     return this
+}
+
+inline fun <S, T> Result<S>.then(handler: (S) -> T): Result<T> {
+    return if (this is Either.Left) {
+        catching { handler(value) }
+    } else Result.Failure(
+        error = "Failed to map result",
+        type = "Transformation Failure",
+        reason = "Original result was a failure"
+    )
 }
 
 inline fun <T> Result<T>.collect(handler: (T) -> Unit) {

@@ -1,4 +1,4 @@
-import tz.co.asoft.*
+import duality.*
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
