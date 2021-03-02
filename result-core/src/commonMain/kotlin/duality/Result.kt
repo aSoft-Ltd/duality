@@ -1,4 +1,4 @@
-package tz.co.asoft
+package duality
 
 typealias Result<T> = Either<T, Failure>
 

@@ -1,5 +1,7 @@
 package tz.co.asoft
 
+import duality.Either
+import duality.value
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 

@@ -1,3 +1,6 @@
+import duality.Result
+import duality.Success
+import duality.toFailure
 import tz.co.asoft.*
 import kotlin.test.Test
 

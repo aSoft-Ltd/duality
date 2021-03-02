@@ -1,4 +1,4 @@
-package tz.co.asoft
+package duality
 
 import kotlinx.serialization.Serializable
 

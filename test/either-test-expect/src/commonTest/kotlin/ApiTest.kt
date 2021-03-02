@@ -1,3 +1,4 @@
+import duality.Either
 import tz.co.asoft.*
 import kotlin.test.Test
 
