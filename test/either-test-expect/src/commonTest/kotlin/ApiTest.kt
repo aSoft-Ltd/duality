@@ -1,4 +1,7 @@
-import tz.co.asoft.*
+import duality.Either
+import duality.toBe
+import duality.toBeEither
+import expect.*
 import kotlin.test.Test
 
 class ApiTest {
@@ -9,7 +12,7 @@ class ApiTest {
 
     @Test
     fun should_easily_assert_an_Either() {
-        val res: Either<String, Int> = 4.asEither()
+        val res: Either<String, Int> = Either.Right(4)
         expect(res).toBe(4)
         expect(res).toBe<Int>()
     }

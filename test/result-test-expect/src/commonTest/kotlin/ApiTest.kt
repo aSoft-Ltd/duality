@@ -1,4 +1,10 @@
-import tz.co.asoft.*
+import duality.Result
+import duality.Success
+import duality.toFailure
+import expect.expect
+import expect.toBe
+import expect.toBeFailure
+import expect.toBeSuccess
 import kotlin.test.Test
 
 class ApiTest {

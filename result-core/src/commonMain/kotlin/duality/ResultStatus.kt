@@ -1,4 +1,4 @@
-package tz.co.asoft
+package duality
 
 enum class ResultStatus {
     Success, Failure

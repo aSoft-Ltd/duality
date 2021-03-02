@@ -1,5 +1,4 @@
 plugins {
-    id("com.android.library")
     kotlin("multiplatform")
     kotlin("plugin.serialization")
     id("tz.co.asoft.library")
@@ -8,7 +7,7 @@ plugins {
 }
 
 kotlin {
-    universalLib()
+    multiplatformLib()
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -18,7 +17,7 @@ kotlin {
 
         val commonTest by getting {
             dependencies {
-                api(asoft("test-core", vers.asoft.test))
+                api(asoft("expect-core", vers.asoft.expect))
             }
         }
     }
