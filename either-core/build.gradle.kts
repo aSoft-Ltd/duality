@@ -12,7 +12,6 @@ kotlin {
     val darwinTargets = listOf(
         watchosArm64(),
         watchosArm32(),
-        watchosX64(),
         watchosX86(),
         macosX64(),
         iosArm64(),
