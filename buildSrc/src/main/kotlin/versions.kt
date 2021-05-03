@@ -1,6 +1,7 @@
 object vers {
     val kotlin = "1.5.0"
     val nexus_staging = "0.22.0"
+    val ktor = "1.5.0"
 
     object asoft {
         val expect = "0.0.30"
