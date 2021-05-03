@@ -1,3 +1,7 @@
+# 0.0.40 : 2021.05.02
+
+- Added kotlin 1.5.0 support
+
 # 0.0.31 : 2021.04.12
 
 - Updated gradle from 6.7.1 to 7.0

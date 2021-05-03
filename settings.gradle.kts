@@ -18,7 +18,9 @@ pluginManagement {
 rootProject.name = "duality"
 
 include(":either-core")
+
 include(":result-core")
+include(":result-ktor")
 
 include(":either-test-expect")
 project(":either-test-expect").projectDir = File("test/either-test-expect")

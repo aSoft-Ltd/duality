@@ -37,17 +37,8 @@ jobs:
       - name: Making gradlew executable
         run: chmod +x ./gradlew
         working-directory: .
-      - name: publishing either-core
-        run: ./gradlew :either-core:publish
-        working-directory: .
-      - name: publishing result-core
-        run: ./gradlew :result-core:publish
-        working-directory: .
-      - name: publishing either-test-expect
-        run: ./gradlew :either-test-expect:publish
-        working-directory: .
-      - name: publishing result-test-expect
-        run: ./gradlew :result-test-expect:publish
+      - name: publishing project
+        run: ./gradlew publish
         working-directory: .
       - name: Closing and Releasing Repositories
         run: ./gradlew :either-core:closeAndReleaseRepository
