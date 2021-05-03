@@ -54,9 +54,9 @@ inline fun Result<*>.failure() = right()
 inline fun Result<*>.failureOrNull() = rightOrNull()
 
 inline fun <T> catching(block: () -> T): Result<T> = try {
-    Either.Left(block())
+    Success(block())
 } catch (e: Exception) {
-    Either.Right(e.asFailure())
+    e.toFailure<T>()
 }
 
 inline fun Throwable.asFailure() = Failure(
@@ -67,8 +67,6 @@ inline fun Throwable.asFailure() = Failure(
 )
 
 inline fun <T> Throwable.toFailure(): Result<T> = asFailure().toResult()
-
-inline fun <T> T.asSuccess(): Result<T> = Success(this)
 
 @OptIn(ExperimentalContracts::class)
 fun <T> Result<T>.isSuccess(): Boolean {

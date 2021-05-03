@@ -8,7 +8,7 @@ class ResultOfEitherTest {
     @Test
     fun should_serialize_a_result_of_either() {
         val eit: Either<Car, Person> = Either.Right(Person("Andy"))
-        val res: Result<Either<Car, Person>> = eit.asSuccess()
+        val res: Result<Either<Car, Person>> = Success(eit)
         println(res)
         assertEquals(res.status, ResultStatus.Success)
         println("Result Json: ${Result.stringifyEither(Car.serializer(), Person.serializer(), res)}")

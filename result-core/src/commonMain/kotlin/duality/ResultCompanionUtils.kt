@@ -45,7 +45,7 @@ fun <L, R> Either.Companion.parseEither(
     rightSerializer: KSerializer<R>,
     json: String
 ): Result<Either<L, R>> = try {
-    parse(leftSerializer, rightSerializer, json).asSuccess()
+    Success(parse(leftSerializer, rightSerializer, json))
 } catch (c: Throwable) {
     Either.Right(
         Failure(
