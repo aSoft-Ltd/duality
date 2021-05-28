@@ -1,3 +1,8 @@
+# 0.0.50 : 2021.05.28
+
+- Enhanced result-ktor by adding routing methods
+- Updated kotlin from 1.5.0 to 1.5.0
+
 # 0.0.40 : 2021.05.02
 
 - Added kotlin 1.5.0 support
